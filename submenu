@@ -7,25 +7,37 @@ public class sub extends SubWay {
 
 	String[] submenu= {"아메리카노","소프트콘","치즈스틱"};//메뉴이름
 	int[] price = {1500,1200,1000};
+	Scanner sc = new Scanner(System.in);
 	
 	@Override
 	public void info(int i) {
-				System.out.println("선택하신 서브메뉴는 "+submenu[i]+" 가격은 "+price[i]);
-	}
-	
-	
-	//subway 메소드
-	public void selcsub() {
-		Scanner sc = new Scanner(System.in);
-		int i = sc.nextInt();
-		System.out.println(submenu[i]+","+price[i]);
-				
+		System.out.println("선택하신 서브메뉴는 "+submenu[i]+" 가격은 "+price[i]);
+		System.out.println("원하시는 수량을 선택해주세요.");
+		int count = sc.nextInt();//수량
+		
+		int result = count*price[i];
+		
+		System.out.println("선택하신 서브메뉴는 "+submenu[i]+"이고 수량은 "+count+",최종가격은 "+result+"입니다.");
+		
 		
 	}
 	
 	
 	
 	
-	///
+	
+	//subway 메소드
+//	public void selcsub() {
+//		Scanner sc = new Scanner(System.in);
+//		int i = sc.nextInt();
+//		System.out.println(submenu[i]+","+price[i]);
+//				
+//		
+//	}
+	
+	
+	
+	
+	
 	
 }

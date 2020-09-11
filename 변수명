@@ -1,0 +1,13 @@
+# TeamSubway
+
+
+[Customer]
+mileage: 마일리지
+level: 회원등급(클래식->라이트->프리미엄->VIP)
+
+burgerqty: 버거 총수량 -> 영수증에 버거 총수량 출력
+subqty: 서브메뉴 총수량 -> 영수증에 서브메뉴 총수량 출력
+
+burgertotal: 버거 총금액 -> 영수증에 버거 총금액 출력
+subtotal: 서브메뉴 총금액 -> 영수증에 서브메뉴 총금액 출력
+

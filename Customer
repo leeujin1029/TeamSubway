@@ -42,8 +42,8 @@ public class Customer {
 		System.out.println(subqty + "     Submenu     " + subtotal);
 		System.out.println("-----------------------------------");	
 		System.out.println("총 금액: " + total + "원");
-//		System.out.println("입력한 금액: " + inputmoney + "원");
-//		System.out.println("거스름돈: " + change + "원");
+		System.out.println("입력한 금액: " + inputmoney + "원");
+		System.out.println("거스름돈: " + change + "원");
 		System.out.println();
 		
 		mileage += (total*0.1);
@@ -66,4 +66,4 @@ public class Customer {
 		
 		
 	}
-}//
+}

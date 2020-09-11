@@ -1,0 +1,48 @@
+package FastFood;
+import java.util.Scanner;
+
+public class burger extends Subway{
+	
+	Scanner sc = new Scanner(System.in);
+	static String[] bread = {"화이트","플랫","위트","허니 오트(1000원 추가)","파마산(1000원 추가)"};
+	int[] breadPrice = {2000,2000,2000,3000,3000,};
+	static String[] meat = {"1. 햄","2. BLT","3. 스테이크","4. 포크","5. 로스터리 치킨"};
+	int[] meatPrice = {3000,2500,4000,2500,2000};
+	static String[] sauce={"1. 마요네즈","2. 스윗칠리","3. 허니머스타드","4. 핫칠리","5. 랜치"};
+	String[] NoVagetable = {"1. 오이","2. 피클","3. 할라피뇨","4. 양파","5. 피망"};
+	static int AllPrice = 0;
+	
+	public void chooseMenu(String[] name) {
+		System.out.println("");
+		int chooseNum= 0;
+		for(int i=0;i<5;i++) {
+			System.out.println("원하시는 메뉴를 선택해 주세요");
+			ShowMaterial(name);
+			i = sc.nextInt();
+			chooseNum =i;
+		}
+		if(name.equals(bread)) {
+			AllPrice += breadPrice[chooseNum];
+		} else if(name.equals(meat)) {
+			AllPrice += meatPrice[chooseNum];
+		} 
+	}
+		public void ShowMaterial(String[] name) {
+			for(int i=0;i<5;i++) {
+				System.out.print((i+1)+". ");
+				System.out.print(name[i]);
+				System.out.println("");
+			}
+		}
+		public static void main(String[] args) {
+			burger bg = new burger();
+			bg.chooseMenu(bread);
+			bg.chooseMenu(meat);
+		}
+		
+		@Override
+		public void Info() {
+			System.out.println(AllPrice);
+		}
+		
+}
